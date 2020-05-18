@@ -3,11 +3,24 @@
     "description": "Yuca's shared PHP Laravel style rules for PHP-CS-Fixer",
     "license": "MIT",
     "require": {
-      "friendsofphp/php-cs-fixer": "^2.0"
+      "friendsofphp/php-cs-fixer": "^2.0",
+      "illuminate/filesystem": ">=5.5"
     },
+    "authors": [
+      {
+          "name": "Bagaskara Wisnu Gunawan",
+          "email": "me@bagaskarawg.id"
+      }
+    ],
     "autoload": {
       "files": [
         "./src/helpers.php"
       ]
+    },
+    "scripts": {
+      "post-install-cmd": [
+        "Yuca::afterInstall",
+        "npm install"
+    ]
     }
   }
